@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>糖心vlog-糖心vlog视频观看与创作者分享_糖心vlog视频_糖心vlog官网首页</title>
+<meta name="description" content="糖心vlog主题首页，汇集糖心vlog视频观看入口、创作者分享与内容分类导航，帮助访问者快速了解糖心vlog的主要内容与使用方式。">
+<meta name="robots" content="index,follow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23f4568c'/%3E%3Cpath d='M24 18l22 14-22 14z' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+:root{
+  --pink:#f4568c;
+  --pink-deep:#d63a72;
+  --ink:#1f2430;
+  --ink-2:#4a5264;
+  --muted:#7b8496;
+  --line:#e8e4ea;
+  --bg:#fdf9fb;
+  --card:#ffffff;
+  --soft:#fff1f6;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img,svg{display:block}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1140px,92vw);margin:0 auto}
+
+/* ---------- header ---------- */
+header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(253,249,251,.9);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.nav{
+  display:flex;align-items:center;gap:28px;
+  height:68px;
+}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;letter-spacing:.5px}
+.brand .mark{
+  width:36px;height:36px;border-radius:11px;
+  background:linear-gradient(135deg,var(--pink),#ff8fb1);
+  display:grid;place-items:center;flex:none;
+  box-shadow:0 6px 16px rgba(244,86,140,.32);
+}
+.brand .mark svg{width:18px;height:18px}
+.brand span{color:var(--ink)}
+.brand .dot{color:var(--pink)}
+nav.links{display:flex;gap:22px;margin-left:8px}
+nav.links a{font-size:14.5px;color:var(--ink-2);padding:6px 0;border-bottom:2px solid transparent;transition:.2s}
+nav.links a:hover{color:var(--pink-deep);border-color:var(--pink)}
+.nav .cta{
+  margin-left:auto;
+  background:var(--pink);color:#fff;
+  padding:9px 20px;border-radius:999px;
+  font-size:14px;font-weight:600;
+  box-shadow:0 6px 16px rgba(244,86,140,.3);
+  transition:.2s;
+}
+.nav .cta:hover{background:var(--pink-deep)}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  padding:64px 0 56px;
+  background:
+    radial-gradient(900px 380px at 88% -10%,#ffe3ee 0%,transparent 60%),
+    radial-gradient(700px 320px at 0% 110%,#f3e8ff 0%,transparent 62%);
+}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:52px;align-items:center}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;color:var(--pink-deep);font-weight:600;
+  background:var(--soft);border:1px solid #ffd7e5;
+  padding:5px 14px;border-radius:999px;margin-bottom:18px;
+}
+.eyebrow i{width:7px;height:7px;border-radius:50%;background:var(--pink);display:block}
+h1{
+  font-size:clamp(32px,4.4vw,50px);
+  line-height:1.18;letter-spacing:-.5px;font-weight:900;
+  margin-bottom:18px;
+}
+h1 em{font-style:normal;color:var(--pink)}
+.hero p.lead{font-size:16.5px;color:var(--ink-2);max-width:34em;margin-bottom:28px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 26px;border-radius:999px;
+  font-size:15px;font-weight:600;transition:.2s;
+}
+.btn-primary{background:var(--pink);color:#fff;box-shadow:0 10px 24px rgba(244,86,140,.34)}
+.btn-primary:hover{background:var(--pink-deep);transform:translateY(-1px)}
+.btn-ghost{background:#fff;color:var(--ink);border:1px solid var(--line);box-shadow:0 4px 12px rgba(31,36,48,.05)}
+.btn-ghost:hover{border-color:#ffc3d8;color:var(--pink-deep)}
+.btn[aria-disabled="true"]{opacity:.92;pointer-events:none}
+.hero-stats{display:flex;gap:34px;margin-top:34px;flex-wrap:wrap}
+.hero-stats div strong{display:block;font-size:22px;font-weight:800;color:var(--ink)}
+.hero-stats div span{font-size:13px;color:var(--muted)}
+
+.hero-art{
+  border-radius:24px;overflow:hidden;
+  background:#fff;border:1px solid var(--line);
+  box-shadow:0 24px 60px rgba(214,58,114,.13);
+}
+.hero-art .screen{aspect-ratio:16/10;background:linear-gradient(140deg,#ffe9f1,#f6e9ff);position:relative}
+.hero-art .screen svg{width:100%;height:100%}
+.hero-art .bar{display:flex;align-items:center;gap:10px;padding:14px 18px;border-top:1px solid var(--line)}
+.hero-art .bar .dot{width:9px;height:9px;border-radius:50%;background:#ffd0df}
+.hero-art .bar .line{height:6px;border-radius:99px;background:#f0ecef;flex:1}
+.hero-art .bar .line.s{flex:0 0 26%}
+
+/* ---------- section shell ---------- */
+section{padding:58px 0}
+.sec-head{margin-bottom:32px;max-width:46em}
+.sec-head .kicker{
+  font-size:13px;font-weight:700;letter-spacing:1.6px;
+  color:var(--pink-deep);text-transform:uppercase;margin-bottom:8px;
+}
+h2{font-size:clamp(23px,2.6vw,30px);font-weight:800;letter-spacing:-.3px;margin-bottom:10px}
+.sec-head p{color:var(--ink-2);font-size:15.5px}
+
+/* ---------- category cards ---------- */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:18px;
+  padding:26px 24px;transition:.22s;
+  display:flex;flex-direction:column;gap:10px;
+}
+.card:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(31,36,48,.08);border-color:#ffd3e2}
+.card .ico{
+  width:44px;height:44px;border-radius:13px;
+  background:var(--soft);display:grid;place-items:center;margin-bottom:4px;
+}
+.card .ico svg{width:22px;height:22px}
+.card h3{font-size:17.5px;font-weight:700}
+.card p{font-size:14.5px;color:var(--ink-2)}
+.card .more{font-size:13.5px;color:var(--pink-deep);font-weight:600;margin-top:auto}
+
+/* ---------- guides ---------- */
+.guides{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.guide-list{display:grid;grid-template-columns:repeat(2,1fr);gap:20px 40px}
+.guide{display:flex;gap:16px;padding:20px 0;border-bottom:1px dashed var(--line)}
+.guide .num{
+  flex:none;width:34px;height:34px;border-radius:10px;
+  background:linear-gradient(135deg,var(--pink),#ff9bbb);color:#fff;
+  font-weight:800;font-size:15px;display:grid;place-items:center;
+}
+.guide h4{font-size:16px;font-weight:700;margin-bottom:4px}
+.guide p{font-size:14.5px;color:var(--ink-2)}
+
+/* ---------- search / filter ---------- */
+.toolbar{
+  display:flex;flex-wrap:wrap;gap:12px;align-items:center;
+  margin-bottom:26px;
+}
+.search-box{
+  display:flex;align-items:center;gap:10px;flex:1;min-width:240px;
+  background:#fff;border:1px solid var(--line);border-radius:999px;
+  padding:10px 18px;box-shadow:0 4px 14px rgba(31,36,48,.04);
+}
+.search-box svg{width:18px;height:18px;flex:none;color:var(--muted)}
+.search-box input{
+  border:0;outline:0;flex:1;font-size:14.5px;font-family:inherit;
+  background:transparent;color:var(--ink);
+}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{
+  border:1px solid var(--line);background:#fff;color:var(--ink-2);
+  padding:8px 16px;border-radius:999px;font-size:13.5px;cursor:pointer;
+  font-family:inherit;transition:.18s;
+}
+.chip:hover{border-color:#ffc3d8;color:var(--pink-deep)}
+.chip.on{background:var(--pink);border-color:var(--pink);color:#fff;font-weight:600}
+.ep-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.ep{
+  background:#fff;border:1px solid var(--line);border-radius:16px;
+  overflow:hidden;transition:.2s;display:flex;flex-direction:column;
+}
+.ep:hover{box-shadow:0 16px 36px rgba(31,36,48,.08);transform:translateY(-2px)}
+.ep .thumb{aspect-ratio:16/9;background:linear-gradient(140deg,#ffe9f1,#f0e6ff);display:grid;place-items:center}
+.ep .thumb svg{width:44px;height:44px;opacity:.9}
+.ep .body{padding:16px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
+.ep .tag{font-size:12px;color:var(--pink-deep);font-weight:600;background:var(--soft);padding:2px 9px;border-radius:99px;align-self:flex-start}
+.ep h4{font-size:15.5px;font-weight:700;line-height:1.5}
+.ep p{font-size:13.5px;color:var(--muted)}
+.ep .foot{margin-top:auto;padding-top:10px;font-size:13px;color:var(--ink-2);display:flex;justify-content:space-between}
+.empty{
+  display:none;padding:40px;text-align:center;color:var(--muted);font-size:14.5px;
+  background:#fff;border:1px dashed var(--line);border-radius:16px;
+}
+
+/* ---------- note ---------- */
+.note{
+  background:linear-gradient(135deg,#fff5f9,#f7f0ff);
+  border:1px solid #ffe0ec;border-radius:20px;padding:34px 36px;
+  display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center;
+}
+.note h3{font-size:20px;font-weight:800;margin-bottom:8px}
+.note p{font-size:14.5px;color:var(--ink-2);max-width:44em}
+
+/* ---------- footer ---------- */
+footer{background:#1f2430;color:#c9cede;padding:48px 0 30px;margin-top:20px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;margin-bottom:32px}
+footer .brand span{color:#fff}
+footer .brand .mark{box-shadow:none}
+footer p.about{font-size:13.5px;color:#8c93a6;margin-top:14px;max-width:30em;line-height:1.8}
+footer h5{font-size:13px;letter-spacing:1.4px;text-transform:uppercase;color:#7f8798;margin-bottom:14px}
+footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+footer ul a{font-size:14px;color:#c9cede;transition:.18s}
+footer ul a:hover{color:var(--pink)}
+.foot-bottom{
+  border-top:1px solid #2e3547;padding-top:20px;
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  font-size:12.5px;color:#7f8798;
+}
+
+/* ---------- responsive ---------- */
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:36px}
+  .hero-art{order:-1}
+  .cards,.ep-grid{grid-template-columns:repeat(2,1fr)}
+  .guide-list{grid-template-columns:1fr}
+  .note{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  .nav{height:auto;flex-wrap:wrap;padding:12px 0;gap:12px}
+  nav.links{order:3;width:100%;overflow-x:auto;gap:18px;padding-bottom:4px;margin-left:0}
+  nav.links a{white-space:nowrap;font-size:14px}
+  .nav .cta{margin-left:auto;padding:8px 16px;font-size:13px}
+  .hero{padding:38px 0 40px}
+  .hero p.lead{font-size:15.5px}
+  .hero-stats{gap:22px}
+  .cards,.ep-grid{grid-template-columns:1fr}
+  section{padding:44px 0}
+  .note{padding:26px 22px}
+  .foot-grid{grid-template-columns:1fr;gap:26px}
+  .brand{font-size:17px}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="糖心vlog 首页">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M8 5.5l11 6.5-11 6.5z" fill="#fff"/></svg>
+      </span>
+      <span>糖心vlog<span class="dot">·</span></span>
+    </a>
+    <nav class="links" aria-label="主导航">
+      <a href="#content">内容分类</a>
+      <a href="#guides">观看指南</a>
+      <a href="#library">视频索引</a>
+      <a href="#about">关于本站</a>
+    </nav>
+    <a class="cta" href="#library">开始浏览</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow"><i></i>主题首页 · 内容导航</span>
+        <h1>糖心vlog</h1>
+        <p class="lead">糖心vlog 在这里被整理成一个清晰的内容入口：按题材分类、按更新顺序排列，帮助第一次访问的人快速找到想看的方向，也让常来的观众少走几步。这个页面本身不播放视频，只负责把糖心vlog的内容脉络讲清楚。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#library">浏览视频索引</a>
+          <a class="btn btn-ghost" href="#guides">查看观看指南</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>6</strong><span>内容分类</span></div>
+          <div><strong>3</strong><span>观看步骤</span></div>
+          <div><strong>1</strong><span>统一入口</span></div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="screen">
+          <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#f4568c"/><stop offset="1" stop-color="#b98cff"/>
+              </linearGradient>
+            </defs>
+            <rect x="40" y="34" width="320" height="160" rx="16" fill="#fff" opacity=".85"/>
+            <rect x="40" y="34" width="320" height="160" rx="16" fill="none" stroke="#ffd3e2"/>
+            <circle cx="200" cy="114" r="34" fill="url(#g1)"/>
+            <path d="M192 100l22 14-22 14z" fill="#fff"/>
+            <rect x="70" y="150" width="120" height="9" rx="4.5" fill="#f3d7e3"/>
+            <rect x="70" y="167" width="76" height="9" rx="4.5" fill="#eee3f6"/>
+            <rect x="250" y="150" width="80" height="9" rx="4.5" fill="#f3d7e3"/>
+            <rect x="70" y="54" width="48" height="14" rx="7" fill="#ffe0ec"/>
+            <rect x="126" y="54" width="36" height="14" rx="7" fill="#ecdcff"/>
+          </svg>
+        </div>
+        <div class="bar">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="line s"></span>
+          <span class="line"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT CATEGORIES -->
+  <section id="content">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Content Map</div>
+        <h2>糖心vlog 的内容按什么分</h2>
+        <p>分类的目的不是堆砌标签，而是让访问者在一屏之内判断“这里有没有我想看的”。以下六类覆盖了糖心vlog最常见的内容方向，各类之间的差异主要体现在选题角度与呈现节奏上。</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#d63a72" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.5l5 2.5-5 2.5z"/></svg></div>
+          <h3>日常记录</h3>
+          <p>以生活片段为主线，节奏舒缓，适合在碎片时间里随手播放，是糖心vlog里门槛最低的一类内容。</p>
+          <span class="more">查看同类视频 →</span>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#d63a72" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></div>
+          <h3>短篇速览</h3>
+          <p>时长偏短、信息密度较高，一集讲清一件事。对刚接触糖心vlog的观众来说，这类内容更容易建立整体印象。</p>
+          <span class="more">查看同类视频 →</span>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#d63a72" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V7a2 2 0 012-2h9l5 5v9a2 2 0 01-2 2H6a2 2 0 01-2-2z"/><path d="M8 12h8M8 16h5"/></svg></div>
+          <h3>主题专题</h3>
+          <p>围绕单一话题成组更新，适合想连续看完一条线索的观众。专题内的顺序通常按发布时间排列。</p>
+          <span class="more">查看同类视频 →</span>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#d63a72" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.6L21 9.4l-4.5 4.3 1.1 6.2L12 17l-5.6 2.9 1.1-6.2L3 9.4l6.4-.8z"/></svg></div>
+          <h3>创作者精选</h3>
+          <p>由创作者本人挑出的代表作，用于快速了解其风格。糖心vlog的创作者分享也常在这里同步说明。</p>
+          <span class="more">查看同类视频 →</span>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#d63a72" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="3"/><circle cx="16.5" cy="14.5" r="2.5"/><path d="M3 20c0-3 2.7-5 6-5s6 2 6 5"/></svg></div>
+          <h3>访谈对话</h3>
+          <p>以问答与交流为主的较长时间内容，信息量集中，适合愿意慢下来听完一段完整叙述的访问者。</p>
+          <span class="more">查看同类视频 →</span>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#d63a72" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg></div>
+          <h3>幕后花絮</h3>
+          <p>拍摄过程、剪辑思路与未收录片段，属于正片之外的补充内容，帮助观众理解一支糖心vlog视频是怎么成形的。</p>
+          <span class="more">查看同类视频 →</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUIDES -->
+  <section id="guides" class="guides">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">How To Start</div>
+        <h2>第一次看糖心vlog，建议这样开始</h2>
+        <p>下面三步按访问顺序排列，不需要注册即可完成前两步。每步只解决一个问题，避免信息一次涌来。</p>
+      </div>
+      <div class="guide-list">
+        <div class="guide">
+          <span class="num">1</span>
+          <div>
+            <h4>先确定想看的方向</h4>
+            <p>用上方的分类卡片或页面下方的筛选条，把范围缩小到一两类。糖心vlog的视频跨度较大，先定方向比逐条翻找更省时间。</p>
+          </div>
+        </div>
+        <div class="guide">
+          <span class="num">2</span>
+          <div>
+            <h4>再挑一支代表作</h4>
+            <p>在结果里优先打开标注为精选或专题首集的条目，它们通常更完整，也更容易判断这个方向是否合口味。</p>
+          </div>
+        </div>
+        <div class="guide">
+          <span class="num">3</span>
+          <div>
+            <h4>最后建立自己的清单</h4>
+            <p>把感兴趣的标题记下来，按创作者或专题归类。糖心vlog的更新节奏并不固定，清单能帮你在下次访问时直接接上。</p>
+          </div>
+        </div>
+        <div class="guide">
+          <span class="num">4</span>
+          <div>
+            <h4>留意更新说明</h4>
+            <p>专题页通常会写清本期状态。如果某支视频显示为待更新，说明内容尚未发布，建议过几天再来查看，而不是反复刷新。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIBRARY -->
+  <section id="library">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Video Index</div>
+        <h2>糖心vlog 视频索引</h2>
+        <p>下面是按分类整理的示例条目，用于说明索引的组织方式。你可以直接在搜索框输入关键词，或点击分类按钮筛选。所有内容说明均来自本页已列出的信息。</p>
+      </div>
+
+      <div class="toolbar">
+        <label class="search-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          <input id="q" type="search" placeholder="输入标题或分类关键词，例如：日常、访谈" aria-label="搜索视频索引">
+        </label>
+        <div class="chips" id="chips" role="group" aria-label="分类筛选">
+          <button class="chip on" data-cat="all">全部</button>
+          <button class="chip" data-cat="日常记录">日常记录</button>
+          <button class="chip" data-cat="短篇速览">短篇速览</button>
+          <button class="chip" data-cat="主题专题">主题专题</button>
+          <button class="chip" data-cat="访谈对话">访谈对话</button>
+        </div>
+      </div>
+
+      <div class="ep-grid" id="grid">
+        <article class="ep" data-cat="日常记录" data-key="日常记录 清晨 通勤 生活片段">
+          <div class="thumb" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="17" fill="#ffd9e6"/><path d="M20 17l11 7-11 7z" fill="#f4568c"/></svg></div>
+          <div class="body">
+            <span class="tag">日常记录</span>
+            <h4>清晨到通勤：一段不加修饰的记录</h4>
+            <p>从起床到出门的连续片段，节奏平缓，适合作为了解糖心vlog日常类内容的起点。</p>
+            <div class="foot"><span>约 8 分钟</span><span>示例条目</span></div>
+          </div>
+        </article>
+        <article class="ep" data-cat="短篇速览" data-key="短篇速览 一分钟 要点 入门">
+          <div class="thumb" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><rect x="8" y="12" width="32" height="24" rx="6" fill="#e7dcff"/><path d="M21 19l9 5-9 5z" fill="#8f6cf0"/></svg></div>
+          <div class="body">
+            <span class="tag">短篇速览</span>
+            <h4>一分钟说清一个主题</h4>
+            <p>用最短篇幅交代背景、要点与结论，是糖心vlog中适合快速浏览的一类短内容。</p>
+            <div class="foot"><span>约 1 分钟</span><span>示例条目</span></div>
+          </div>
+        </article>
+        <article class="ep" data-cat="主题专题" data-key="主题专题 连载 第一集 系列">
+          <div class="thumb" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><rect x="9" y="9" width="13" height="13" rx="4" fill="#ffd9e6"/><rect x="26" y="9" width="13" height="13" rx="4" fill="#ffe9c9"/><rect x="9" y="26" width="13" height="13" rx="4" fill="#e0f0ff"/><rect x="26" y="26" width="13" height="13" rx="4" fill="#e7dcff"/></svg></div>
+          <div class="body">
+            <span class="tag">主题专题</span>
+            <h4>专题连载 · 第一集</h4>
+            <p>围绕单一话题展开的系列开篇，交代后续的更新顺序与大致范围，建议从这里进入。</p>
+            <div class="foot"><span>专题首集</span><span>示例条目</span></div>
+          </div>
+        </article>
+        <article class="ep" data-cat="访谈对话" data-key="访谈对话 创作者 问答 交流">
+          <div class="thumb" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><circle cx="19" cy="20" r="7" fill="#ffd0df"/><circle cx="31" cy="28" r="6" fill="#dcd2ff"/><path d="M8 40c0-6 5-9 11-9s11 3 11 9" fill="#ffe3ee"/></svg></div>
+          <div class="body">
+            <span class="tag">访谈对话</span>
+            <h4>和创作者聊一次创作过程</h4>
+            <p>一问一答的较长内容，涉及选题、拍摄与剪辑，构成糖心vlog创作者分享的一部分。</p>
+            <div class="foot"><span>约 25 分钟</span><span>示例条目</span></div>
+          </div>
+        </article>
+        <article class="ep" data-cat="日常记录" data-key="日常记录 周末 外出 记录">
+          <div class="thumb" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><rect x="8" y="13" width="32" height="22" rx="6" fill="#ffe9c9"/><circle cx="24" cy="24" r="6" fill="#f0a93c"/></svg></div>
+          <div class="body">
+            <span class="tag">日常记录</span>
+            <h4>周末外出的随手记录</h4>
+            <p>没有脚本的零散片段，强调现场感。想看轻松内容的访问者可以先从这类开始。</p>
+            <div class="foot"><span>约 12 分钟</span><span>示例条目</span></div>
+          </div>
+        </article>
+        <article class="ep" data-cat="短篇速览" data-key="短篇速览 剪辑 幕后 花絮">
+          <div class="thumb" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><rect x="9" y="16" width="30" height="18" rx="5" fill="#e0f0ff"/><path d="M14 25h8M26 25h8" stroke="#4a90d9" stroke-width="2.4" stroke-linecap="round"/></svg></div>
+          <div class="body">
+            <span class="tag">短篇速览</span>
+            <h4>幕后：一支视频是怎么剪出来的</h4>
+            <p>从素材筛选到成片导出，简要说明剪辑流程，属于糖心vlog正片之外的补充内容。</p>
+            <div class="foot"><span>约 5 分钟</span><span>示例条目</span></div>
+          </div>
+        </article>
+      </div>
+
+      <div class="empty" id="empty">没有匹配的条目，试试换一个关键词，或点击“全部”查看完整索引。</div>
+    </div>
+  </section>
+
+  <!-- ABOUT / NOTE -->
+  <section id="about">
+    <div class="wrap">
+      <div class="note">
+        <div>
+          <h3>关于这个糖心vlog 首页</h3>
+          <p>本页是糖心vlog的主题导航页，目的是把分类、观看顺序与索引集中在一处，方便访问者按需查找。页面不承载播放功能，也不对具体视频的更新时间作出承诺；索引中的条目为结构示例，用于说明分类与筛选的工作方式。若你需要保存页面说明或后续的整理清单，可使用下方入口。</p>
+        </div>
+        <a class="btn btn-primary" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">下载</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#top">
+          <span class="mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M8 5.5l11 6.5-11 6.5z" fill="#fff"/></svg>
+          </span>
+          <span>糖心vlog<span class="dot">·</span></span>
+        </a>
+        <p class="about">糖心vlog 主题首页，整理内容分类、观看步骤与视频索引，帮助访问者用更短的时间找到想看的方向。</p>
+      </div>
+      <div>
+        <h5>页面导航</h5>
+        <ul>
+          <li><a href="#content">内容分类</a></li>
+          <li><a href="#guides">观看指南</a></li>
+          <li><a href="#library">视频索引</a></li>
+          <li><a href="#about">关于本站</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>常用分类</h5>
+        <ul>
+          <li><a href="#library">日常记录</a></li>
+          <li><a href="#library">短篇速览</a></li>
+          <li><a href="#library">主题专题</a></li>
+          <li><a href="#library">访谈对话</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2024 糖心vlog 主题导航 · 内容以本页说明为准</span>
+      <span>本站为索引页，不提供播放服务</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var grid = document.getElementById('grid');
+  var items = Array.prototype.slice.call(grid.querySelectorAll('.ep'));
+  var chips = Array.prototype.slice.call(document.querySelectorAll('#chips .chip'));
+  var q = document.getElementById('q');
+  var empty = document.getElementById('empty');
+  var cat = 'all';
+
+  function apply(){
+    var kw = (q.value || '').trim().toLowerCase();
+    var shown = 0;
+    items.forEach(function(el){
+      var okCat = (cat === 'all') || el.getAttribute('data-cat') === cat;
+      var key = (el.getAttribute('data-key') || '') + ' ' + el.textContent;
+      var okKw = !kw || key.toLowerCase().indexOf(kw) > -1;
+      var show = okCat && okKw;
+      el.style.display = show ? '' : 'none';
+      if(show) shown++;
+    });
+    empty.style.display = shown ? 'none' : 'block';
+  }
+
+  chips.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      chips.forEach(function(b){ b.classList.remove('on'); });
+      btn.classList.add('on');
+      cat = btn.getAttribute('data-cat');
+      apply();
+    });
+  });
+
+  q.addEventListener('input', apply);
+  apply();
+})();
+</script>
+</body>
+  </html>
