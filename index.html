@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日吃瓜大赛-吃瓜大赛每日瓜料_每日热门瓜盘点_网友吃瓜围观</title>
+<meta name="description" content="每日吃瓜大赛汇总每日网络热门瓜料与网友围观话题，按时间与热度整理当日瓜点，提供瓜料速览、话题分类、围观榜单与参与讨论入口，帮助读者快速了解每日吃瓜大赛的当日内容。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23f2f6f0'/%3E%3Cpath d='M32 6c14 0 26 12 26 26S46 58 32 58 6 46 6 32 18 6 32 6zm0 4C19.8 10 10 19.8 10 32s9.8 22 22 22 22-9.8 22-22S44.2 10 32 10z' fill='%233f8f4e'/%3E%3Cpath d='M12 36c6-10 14-14 22-14s16 4 20 12c-6-6-13-8-20-8s-15 3-22 10z' fill='%233f8f4e'/%3E%3Ccircle cx='24' cy='30' r='2.4' fill='%23243b28'/%3E%3Ccircle cx='40' cy='30' r='2.4' fill='%23243b28'/%3E%3C/svg%3E">
+<style>
+:root{
+  --green:#3f8f4e;
+  --green-deep:#2c6b38;
+  --green-soft:#e8f2e6;
+  --melon:#f4b8c2;
+  --melon-deep:#e08a9c;
+  --ink:#22302a;
+  --ink-soft:#5a6b62;
+  --paper:#fbfdf9;
+  --line:#dce8d8;
+  --radius:16px;
+  --shadow:0 8px 24px rgba(44,107,56,.08);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.75;
+  font-size:16px;
+}
+a{color:var(--green-deep);text-decoration:none;}
+a:hover{text-decoration:underline;}
+img,svg{max-width:100%;}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 20px;}
+
+/* 页头 */
+header.site{
+  position:sticky;top:0;z-index:50;
+  background:rgba(251,253,249,.94);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.head-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:16px;padding:12px 0;flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;color:var(--ink);letter-spacing:.5px;}
+.brand:hover{text-decoration:none;}
+.brand svg{width:38px;height:38px;flex:none;}
+nav.main{display:flex;gap:18px;flex-wrap:wrap;font-size:15px;}
+nav.main a{color:var(--ink-soft);padding:4px 2px;border-bottom:2px solid transparent;}
+nav.main a:hover{color:var(--green-deep);border-bottom-color:var(--melon);text-decoration:none;}
+
+/* 首屏 */
+.hero{
+  background:linear-gradient(160deg,var(--green-soft) 0%,#fdf6f4 100%);
+  border-bottom:1px solid var(--line);
+  padding:52px 0 44px;
+  position:relative;overflow:hidden;
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.35fr .9fr;gap:40px;align-items:center;
+}
+.hero h1{
+  font-size:clamp(28px,4.4vw,46px);
+  line-height:1.25;margin:0 0 16px;letter-spacing:1px;
+  color:var(--green-deep);
+}
+.hero p.lead{
+  font-size:17px;color:var(--ink-soft);margin:0 0 22px;max-width:34em;
+}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center;}
+.btn{
+  display:inline-block;padding:11px 22px;border-radius:999px;
+  font-weight:700;font-size:15px;transition:.2s;
+}
+.btn-primary{background:var(--green);color:#fff;box-shadow:0 6px 16px rgba(63,143,78,.28);}
+.btn-primary:hover{background:var(--green-deep);text-decoration:none;transform:translateY(-1px);}
+.btn-ghost{background:#fff;color:var(--green-deep);border:1.5px solid var(--green);}
+.btn-ghost:hover{background:var(--green-soft);text-decoration:none;}
+.btn[aria-disabled="true"]{
+  background:#eef3ec;color:#93a89a;border:1.5px dashed #bccfbb;
+  cursor:not-allowed;box-shadow:none;
+}
+.hero-meta{display:flex;gap:22px;margin-top:26px;flex-wrap:wrap;font-size:14px;color:var(--ink-soft);}
+.hero-meta b{display:block;font-size:22px;color:var(--green-deep);line-height:1.2;}
+.hero-art{display:flex;justify-content:center;}
+.hero-art svg{width:100%;max-width:330px;height:auto;}
+
+/* 通用分区 */
+section.block{padding:54px 0;}
+section.block.alt{background:#f5faf3;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.sec-head{margin-bottom:26px;}
+.sec-head h2{
+  font-size:clamp(21px,2.6vw,27px);margin:0 0 8px;color:var(--ink);
+  letter-spacing:.5px;
+}
+.sec-head h2::before{
+  content:"";display:inline-block;width:10px;height:10px;border-radius:50%;
+  background:var(--melon-deep);margin-right:10px;vertical-align:middle;
+}
+.sec-head p{margin:0;color:var(--ink-soft);font-size:15px;max-width:46em;}
+
+/* 瓜料卡片 */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px;box-shadow:var(--shadow);display:flex;flex-direction:column;
+  transition:.22s;
+}
+.card:hover{transform:translateY(-3px);border-color:#c4dcc0;}
+.card .tag{
+  align-self:flex-start;font-size:12px;font-weight:700;color:var(--green-deep);
+  background:var(--green-soft);border-radius:999px;padding:3px 11px;margin-bottom:12px;
+  letter-spacing:.5px;
+}
+.card h3{font-size:17px;margin:0 0 8px;line-height:1.5;}
+.card p{margin:0;color:var(--ink-soft);font-size:14.5px;flex:1;}
+.card .foot{
+  margin-top:16px;padding-top:12px;border-top:1px dashed var(--line);
+  font-size:13px;color:#8a9a90;display:flex;justify-content:space-between;gap:8px;
+}
+
+/* 围观榜单 */
+.board{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:18px;
+}
+.board-item{
+  background:#fff;border:1px solid var(--line);border-left:5px solid var(--melon-deep);
+  border-radius:12px;padding:16px 20px;display:flex;gap:16px;align-items:flex-start;
+}
+.board-item .no{
+  font-size:26px;font-weight:800;color:var(--melon-deep);line-height:1;flex:none;
+  font-family:Georgia,serif;
+}
+.board-item h3{font-size:16px;margin:0 0 4px;}
+.board-item p{margin:0;font-size:14px;color:var(--ink-soft);}
+
+/* 规则/说明 */
+.split{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:start;}
+.rules{list-style:none;margin:0;padding:0;counter-reset:r;}
+.rules li{
+  counter-increment:r;position:relative;padding:0 0 18px 46px;margin-bottom:0;
+  color:var(--ink-soft);font-size:15px;
+}
+.rules li::before{
+  content:counter(r);position:absolute;left:0;top:0;
+  width:30px;height:30px;border-radius:50%;background:var(--green);
+  color:#fff;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;
+}
+.rules li b{color:var(--ink);}
+.note{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px;box-shadow:var(--shadow);
+}
+.note h3{margin:0 0 10px;font-size:16.5px;color:var(--green-deep);}
+.note p{margin:0 0 10px;font-size:14.5px;color:var(--ink-soft);}
+.note p:last-child{margin-bottom:0;}
+
+/* 搜索 */
+.filter-box{
+  display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px;
+}
+.filter-box input{
+  flex:1;min-width:200px;padding:11px 16px;border-radius:999px;
+  border:1.5px solid var(--line);background:#fff;font-size:15px;color:var(--ink);
+  font-family:inherit;outline:none;
+}
+.filter-box input:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(63,143,78,.12);}
+.filter-box button{
+  padding:11px 24px;border-radius:999px;border:none;background:var(--green);
+  color:#fff;font-weight:700;font-size:15px;cursor:pointer;font-family:inherit;
+}
+.filter-box button:hover{background:var(--green-deep);}
+.empty-tip{display:none;color:var(--ink-soft);font-size:15px;padding:14px 0;}
+
+/* 页尾 */
+footer.site{
+  background:var(--ink);color:#cfdcd2;padding:40px 0 30px;font-size:14px;
+}
+footer.site .f-top{
+  display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;
+  padding-bottom:22px;border-bottom:1px solid rgba(255,255,255,.12);margin-bottom:20px;
+}
+footer.site .brand{color:#fff;font-size:17px;}
+footer.site .brand svg{width:32px;height:32px;}
+footer.site nav{display:flex;gap:16px;flex-wrap:wrap;}
+footer.site nav a{color:#b9cdbe;}
+footer.site nav a:hover{color:#fff;}
+footer.site p{margin:0 0 6px;color:#93a89a;}
+
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:28px;}
+  .hero-art{order:-1;max-width:220px;margin:0 auto;}
+  .cards{grid-template-columns:repeat(2,1fr);}
+  .split{grid-template-columns:1fr;}
+}
+@media(max-width:620px){
+  body{font-size:15.5px;}
+  .head-inner{justify-content:center;text-align:center;}
+  nav.main{justify-content:center;gap:12px;font-size:14px;}
+  .hero{padding:34px 0 30px;}
+  .hero-meta{gap:16px;}
+  .cards{grid-template-columns:1fr;}
+  .board{grid-template-columns:1fr;}
+  section.block{padding:38px 0;}
+  .board-item{padding:14px 16px;}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap head-inner">
+    <a class="brand" href="#top" aria-label="每日吃瓜大赛首页">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <circle cx="32" cy="32" r="30" fill="#e8f2e6"/>
+        <path d="M32 6c14 0 26 12 26 26S46 58 32 58 6 46 6 32 18 6 32 6zm0 4C19.8 10 10 19.8 10 32s9.8 22 22 22 22-9.8 22-22S44.2 10 32 10z" fill="#3f8f4e"/>
+        <path d="M12 36c6-10 14-14 22-14s16 4 20 12c-6-6-13-8-20-8s-15 3-22 10z" fill="#3f8f4e"/>
+        <circle cx="24" cy="30" r="2.4" fill="#243b28"/>
+        <circle cx="40" cy="30" r="2.4" fill="#243b28"/>
+        <path d="M26 40c3 2 9 2 12 0" stroke="#243b28" stroke-width="2" fill="none" stroke-linecap="round"/>
+      </svg>
+      每日吃瓜大赛
+    </a>
+    <nav class="main" aria-label="主导航">
+      <a href="#today">今日瓜料</a>
+      <a href="#board">围观榜单</a>
+      <a href="#rules">参与规则</a>
+      <a href="#search">瓜料检索</a>
+      <a href="#about">关于本站</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>每日吃瓜大赛</h1>
+        <p class="lead">每日吃瓜大赛把一天里分散在网络各处的话题瓜料收拢到同一页，按热度与时间排好，方便你一次看清当天有哪些瓜、大家在围观什么、讨论集中在哪几句上。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#today">看今日瓜料</a>
+          <a class="btn btn-ghost" href="#board">围观榜单</a>
+          <a class="btn" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">下载</a>
+        </div>
+        <div class="hero-meta">
+          <div><b>3</b>大类瓜料分区</div>
+          <div><b>6</b>条当日瓜点速览</div>
+          <div><b>每日</b>更新整理一次</div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 320 300">
+          <ellipse cx="160" cy="266" rx="118" ry="16" fill="#d9ead6"/>
+          <path d="M160 40c62 0 108 42 108 108 0 58-48 100-108 100S52 206 52 148C52 82 98 40 160 40z" fill="#eaf6e6" stroke="#3f8f4e" stroke-width="4"/>
+          <path d="M160 40c62 0 108 42 108 108-26-30-64-44-108-44S78 118 52 148C52 82 98 40 160 40z" fill="#8fc98a"/>
+          <path d="M160 40c62 0 108 42 108 108 0 58-48 100-108 100S52 206 52 148C52 82 98 40 160 40z" fill="none" stroke="#2c6b38" stroke-width="4"/>
+          <circle cx="120" cy="160" r="9" fill="#243b28"/>
+          <circle cx="200" cy="160" r="9" fill="#243b28"/>
+          <circle cx="123" cy="156" r="3" fill="#fff"/>
+          <circle cx="203" cy="156" r="3" fill="#fff"/>
+          <path d="M128 196c20 14 44 14 64 0" stroke="#243b28" stroke-width="5" fill="none" stroke-linecap="round"/>
+          <path d="M160 40c-6-14-2-24 8-30 6 10 4 22-8 30z" fill="#3f8f4e"/>
+          <circle cx="246" cy="96" r="7" fill="#f4b8c2"/>
+          <circle cx="76" cy="110" r="5" fill="#f4b8c2"/>
+          <circle cx="252" cy="200" r="5" fill="#f4b8c2"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- 今日瓜料 -->
+  <section class="block" id="today">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>今日瓜料速览</h2>
+        <p>每日吃瓜大赛的瓜料按话题类型分成三块：娱乐热点、网络热议与生活趣闻。每张卡片只保留事件梗概、围观焦点和整理时间，不展开未经确认的细节。</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <span class="tag">娱乐热点</span>
+          <h3>新剧官宣阵容引发选角讨论</h3>
+          <p>某剧集公布主演名单后，观众把注意力放在角色与演员的匹配度上，讨论集中在造型路透与原著设定之间是否贴近。</p>
+          <div class="foot"><span>围观焦点：选角</span><span>整理于今日</span></div>
+        </article>
+        <article class="card">
+          <span class="tag">娱乐热点</span>
+          <h3>综艺片段二次传播带火一句话</h3>
+          <p>节目中的一段对话被剪成短视频反复转发，成为当天的口头梗，网友更多是在玩梗，而非追究节目本身。</p>
+          <div class="foot"><span>围观焦点：玩梗</span><span>整理于今日</span></div>
+        </article>
+        <article class="card">
+          <span class="tag">网络热议</span>
+          <h3>平台新规调整会员权益</h3>
+          <p>服务条款更新后，用户关注点落在权益范围与退订流程上，讨论以实际使用体验为主，官方说明被反复引用。</p>
+          <div class="foot"><span>围观焦点：权益</span><span>整理于今日</span></div>
+        </article>
+        <article class="card">
+          <span class="tag">网络热议</span>
+          <h3>一款工具类应用突然走红</h3>
+          <p>应用在社交平台被集中推荐后下载量上升，围观者关心的是它究竟解决了什么问题，以及是否值得长期使用。</p>
+          <div class="foot"><span>围观焦点：实用度</span><span>整理于今日</span></div>
+        </article>
+        <article class="card">
+          <span class="tag">生活趣闻</span>
+          <h3>城市公园的“共享菜园”被围观</h3>
+          <p>居民把闲置角落改造成小菜园，路人拍照分享，讨论转向社区公共空间该如何使用与维护。</p>
+          <div class="foot"><span>围观焦点：公共空间</span><span>整理于今日</span></div>
+        </article>
+        <article class="card">
+          <span class="tag">生活趣闻</span>
+          <h3>便利店新品口味测评刷屏</h3>
+          <p>新品上市后出现大量口味测评，评价两极分化，围观者更在意真实口感描述，而不是夸张的标题。</p>
+          <div class="foot"><span>围观焦点：测评</span><span>整理于今日</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 围观榜单 -->
+  <section class="block alt" id="board">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>围观榜单与讨论落点</h2>
+        <p>榜单不排名谁对谁错，只记录当天被反复提起的话题，以及讨论最终落在哪一层。每日吃瓜大赛更看重“讨论落点”，因为它决定一条瓜值不值得继续跟。</p>
+      </div>
+      <div class="board">
+        <div class="board-item">
+          <span class="no">01</span>
+          <div>
+            <h3>事实层：发生了什么</h3>
+            <p>先确认时间、主体与公开来源，避免把转述当成原始信息，这是围观的第一层。</p>
+          </div>
+        </div>
+        <div class="board-item">
+          <span class="no">02</span>
+          <div>
+            <h3>解释层：为什么被关注</h3>
+            <p>话题被放大往往因为触及共同经验，例如消费权益、职场节奏或审美偏好。</p>
+          </div>
+        </div>
+        <div class="board-item">
+          <span class="no">03</span>
+          <div>
+            <h3>情绪层：大家在说什么</h3>
+            <p>评论区的高频词能反映情绪走向，但情绪不等于结论，需要与事实分开看。</p>
+          </div>
+        </div>
+        <div class="board-item">
+          <span class="no">04</span>
+          <div>
+            <h3>后续层：是否会有下文</h3>
+            <p>能等到官方回应或当事人说明的瓜，通常会进入第二轮讨论，值得放进跟踪清单。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 参与规则 -->
+  <section class="block" id="rules">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>参与每日吃瓜大赛的方式</h2>
+        <p>参与不等于站队。把看到的信息按下面四步整理，再决定要不要转发，是每日吃瓜大赛默认的围观姿势。</p>
+      </div>
+      <div class="split">
+        <ol class="rules">
+          <li><b>先看来源。</b>截图、转述与原始发布要区分开，能点回原文的先点回去，找不到出处的先放一放。</li>
+          <li><b>再看时间。</b>旧闻被重新包装是常见情况，核对发布时间能过滤掉相当一部分“新瓜”。</li>
+          <li><b>分清事实与评价。</b>谁说了什么属于事实，说得对不对属于评价，两者混在一起最容易误传。</li>
+          <li><b>保留余地。</b>信息尚未完整时，用“目前公开信息显示”这类表述，比下定论更接近真实情况。</li>
+        </ol>
+        <aside class="note">
+          <h3>关于瓜料范围</h3>
+          <p>本站整理的是公开可见的网络话题，不涉及个人隐私、未公开身份信息与未经证实的指控。</p>
+          <p>涉及具体人物的内容，只引用其公开表态或官方渠道说明；无来源的爆料不收录，也不做二次加工。</p>
+          <p>每日吃瓜大赛的目标是让围观更清楚，而不是让讨论更热闹。若某条瓜料后续被澄清，我们会在同一条目下补充说明。</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 检索 -->
+  <section class="block alt" id="search">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>瓜料检索</h2>
+        <p>输入关键词，快速定位本页中的瓜料卡片。支持按话题类型、围观焦点或梗概文字查找，例如“选角”“权益”“测评”。</p>
+      </div>
+      <div class="filter-box">
+        <label for="q" class="sr-only" style="position:absolute;left:-9999px;">搜索瓜料</label>
+        <input type="search" id="q" placeholder="输入关键词，如：选角 / 权益 / 测评">
+        <button type="button" id="qbtn">检索瓜料</button>
+      </div>
+      <p class="empty-tip" id="emptyTip">没有匹配的瓜料，换个关键词试试，或清空输入查看全部卡片。</p>
+      <div class="cards" id="searchCards">
+        <article class="card" data-key="娱乐热点 选角 新剧 官宣 造型 路透 原著">
+          <span class="tag">娱乐热点</span>
+          <h3>新剧官宣阵容引发选角讨论</h3>
+          <p>主演名单公布后，观众把注意力放在角色与演员的匹配度上，讨论集中在造型路透与原著设定是否贴近。</p>
+          <div class="foot"><span>围观焦点：选角</span><span>整理于今日</span></div>
+        </article>
+        <article class="card" data-key="娱乐热点 综艺 片段 玩梗 短视频 口头梗">
+          <span class="tag">娱乐热点</span>
+          <h3>综艺片段二次传播带火一句话</h3>
+          <p>节目中的一段对话被剪成短视频反复转发，成为当天的口头梗，网友更多是在玩梗，而非追究节目本身。</p>
+          <div class="foot"><span>围观焦点：玩梗</span><span>整理于今日</span></div>
+        </article>
+        <article class="card" data-key="网络热议 平台 新规 会员 权益 退订 条款">
+          <span class="tag">网络热议</span>
+          <h3>平台新规调整会员权益</h3>
+          <p>服务条款更新后，用户关注点落在权益范围与退订流程上，讨论以实际使用体验为主，官方说明被反复引用。</p>
+          <div class="foot"><span>围观焦点：权益</span><span>整理于今日</span></div>
+        </article>
+        <article class="card" data-key="网络热议 工具 应用 走红 下载 实用 推荐">
+          <span class="tag">网络热议</span>
+          <h3>一款工具类应用突然走红</h3>
+          <p>应用在社交平台被集中推荐后下载量上升，围观者关心的是它究竟解决了什么问题，以及是否值得长期使用。</p>
+          <div class="foot"><span>围观焦点：实用度</span><span>整理于今日</span></div>
+        </article>
+        <article class="card" data-key="生活趣闻 公园 共享菜园 社区 公共空间 居民">
+          <span class="tag">生活趣闻</span>
+          <h3>城市公园的“共享菜园”被围观</h3>
+          <p>居民把闲置角落改造成小菜园，路人拍照分享，讨论转向社区公共空间该如何使用与维护。</p>
+          <div class="foot"><span>围观焦点：公共空间</span><span>整理于今日</span></div>
+        </article>
+        <article class="card" data-key="生活趣闻 便利店 新品 口味 测评 口感 评价">
+          <span class="tag">生活趣闻</span>
+          <h3>便利店新品口味测评刷屏</h3>
+          <p>新品上市后出现大量口味测评，评价两极分化，围观者更在意真实口感描述，而不是夸张的标题。</p>
+          <div class="foot"><span>围观焦点：测评</span><span>整理于今日</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关于 -->
+  <section class="block" id="about">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>关于每日吃瓜大赛</h2>
+      </div>
+      <div class="split">
+        <div>
+          <p>每日吃瓜大赛是一个围绕网络公开话题的日常整理页。它不生产瓜料，也不替任何一方下判断，只做三件事：把当天被集中讨论的话题列出来，标出讨论落点，并保留信息来源的层级。</p>
+          <p>页面内容每日整理一次，瓜料以梗概为主，细节留给读者回到原始渠道核对。对于已经出现官方说明或当事人回应的条目，我们会补注“已有回应”，方便判断是否值得继续跟进。</p>
+          <p>如果你只是想快速知道今天大家在聊什么，看“今日瓜料速览”即可；如果你想判断一条瓜能不能信，先看“围观榜单与讨论落点”里的四层结构，再用检索定位具体卡片。</p>
+        </div>
+        <aside class="note">
+          <h3>阅读提示</h3>
+          <p>瓜料的价值在于信息，而不在于情绪。看到不确定的内容，可以先记下来源与时间，再决定是否分享。</p>
+          <p>本站不提供爆料投递入口，也不收集个人身份信息；页面中的搜索与筛选均在本页内完成。</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="f-top">
+      <a class="brand" href="#top">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <circle cx="32" cy="32" r="30" fill="#243b28"/>
+          <path d="M32 6c14 0 26 12 26 26S46 58 32 58 6 46 6 32 18 6 32 6z" fill="none" stroke="#8fc98a" stroke-width="4"/>
+          <path d="M12 36c6-10 14-14 22-14s16 4 20 12c-6-6-13-8-20-8s-15 3-22 10z" fill="#8fc98a"/>
+          <circle cx="24" cy="30" r="2.4" fill="#eaf6e6"/>
+          <circle cx="40" cy="30" r="2.4" fill="#eaf6e6"/>
+        </svg>
+        每日吃瓜大赛
+      </a>
+      <nav aria-label="页尾导航">
+        <a href="#today">今日瓜料</a>
+        <a href="#board">围观榜单</a>
+        <a href="#rules">参与规则</a>
+        <a href="#search">瓜料检索</a>
+        <a href="#about">关于本站</a>
+      </nav>
+    </div>
+    <p>每日吃瓜大赛 · 每日公开话题整理页 · 内容以公开信息为限</p>
+    <p>瓜料仅为话题梗概，具体细节请回到原始渠道核对。本站不收录未经证实的指控与个人隐私信息。</p>
+    <p>© 每日吃瓜大赛 · 本页为站点首页示例，内容随每日整理更新</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var input=document.getElementById('q');
+  var btn=document.getElementById('qbtn');
+  var tip=document.getElementById('emptyTip');
+  var cards=Array.prototype.slice.call(document.querySelectorAll('#searchCards .card'));
+
+  function run(){
+    var kw=(input.value||'').trim().toLowerCase();
+    var shown=0;
+    cards.forEach(function(c){
+      var key=(c.getAttribute('data-key')||'')+' '+c.textContent.toLowerCase();
+      var ok=!kw||key.toLowerCase().indexOf(kw)>-1;
+      c.style.display=ok?'':'none';
+      if(ok) shown++;
+    });
+    tip.style.display=shown===0?'block':'none';
+  }
+  btn.addEventListener('click',run);
+  input.addEventListener('keydown',function(e){ if(e.key==='Enter'){ e.preventDefault(); run(); }});
+  input.addEventListener('input',function(){ if(!input.value.trim()) run(); });
+})();
+</script>
+</body>
+</html>
