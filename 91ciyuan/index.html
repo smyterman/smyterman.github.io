@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>91次元漫画-在线漫画阅读平台_热门漫画推荐_免费漫画入口</title>
+<meta name="description" content="91次元漫画是在线漫画阅读平台，提供热门漫画推荐、分类浏览与在线阅读入口，涵盖国漫、日漫、韩漫等多题材作品，帮助读者快速找到想看的漫画内容。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2315151f'/%3E%3Cpath d='M18 20h12a6 6 0 0 1 6 6v20a5 5 0 0 0-5-5H18z' fill='%23ff6b5b'/%3E%3Cpath d='M46 20H34a6 6 0 0 0-6 6v20a5 5 0 0 1 5-5h13z' fill='%23ffd166'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#15151f;
+  --ink-soft:#2a2a3a;
+  --paper:#f6f4ef;
+  --card:#ffffff;
+  --accent:#ff6b5b;
+  --accent-2:#ffd166;
+  --muted:#6b6b7b;
+  --line:#e4e0d8;
+  --radius:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+
+/* header */
+header.site{
+  position:sticky;top:0;z-index:50;
+  background:rgba(21,21,31,.94);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.nav{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:18px;padding:12px 0;flex-wrap:wrap;
+}
+.logo{display:flex;align-items:center;gap:10px;color:#fff;font-weight:800;font-size:19px;letter-spacing:.5px}
+.logo .mark{width:34px;height:34px;flex:0 0 auto}
+.navlinks{display:flex;gap:6px;flex-wrap:wrap}
+.navlinks a{
+  color:#d8d6e0;font-size:14px;padding:7px 13px;border-radius:999px;
+  transition:background .2s,color .2s;
+}
+.navlinks a:hover,.navlinks a:focus{background:rgba(255,255,255,.12);color:#fff}
+
+/* hero */
+.hero{
+  background:
+    radial-gradient(circle at 88% 12%,rgba(255,209,102,.22),transparent 42%),
+    radial-gradient(circle at 8% 88%,rgba(255,107,91,.20),transparent 46%),
+    var(--ink);
+  color:#fff;
+  padding:56px 0 62px;
+}
+.hero .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;color:var(--accent-2);
+  border:1px solid rgba(255,209,102,.45);
+  padding:5px 13px;border-radius:999px;margin-bottom:18px;
+}
+h1{
+  font-size:clamp(30px,4.6vw,46px);
+  line-height:1.22;font-weight:900;letter-spacing:1px;margin-bottom:16px;
+}
+h1 .hl{
+  background:linear-gradient(180deg,transparent 62%,rgba(255,107,91,.55) 62%);
+  padding:0 4px;
+}
+.hero p.lead{color:#cfcddb;font-size:16px;max-width:34em;margin-bottom:26px}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 24px;border-radius:12px;font-size:15px;font-weight:700;
+  border:1px solid transparent;cursor:pointer;transition:transform .16s,box-shadow .16s;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 8px 22px rgba(255,107,91,.32)}
+.btn-ghost{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.22)}
+.hero-art{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:22px;padding:20px;
+}
+.hero-art svg{width:100%;height:auto;border-radius:12px}
+
+/* quick stats */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:32px}
+.stat{
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.10);
+  border-radius:14px;padding:14px 16px;
+}
+.stat b{display:block;font-size:20px;color:var(--accent-2)}
+.stat span{font-size:13px;color:#bdbbc9}
+
+/* sections */
+section.block{padding:58px 0}
+section.block.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.sec-head{margin-bottom:28px}
+.sec-head h2{font-size:clamp(22px,3vw,28px);font-weight:900;letter-spacing:.5px;margin-bottom:8px}
+.sec-head p{color:var(--muted);font-size:15px;max-width:52em}
+.tag{color:var(--accent);font-weight:700;font-size:13px;letter-spacing:2px;display:block;margin-bottom:6px}
+
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px;display:flex;flex-direction:column;gap:10px;
+  transition:transform .18s,box-shadow .18s,border-color .18s;
+}
+.card:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(21,21,31,.09);border-color:#d5cfc2}
+.card .icon{width:38px;height:38px;border-radius:10px;background:rgba(255,107,91,.12);display:grid;place-items:center}
+.card h3{font-size:17px;font-weight:800}
+.card p{font-size:14px;color:var(--muted);line-height:1.72}
+
+/* list rows */
+.rows{display:grid;gap:14px}
+.row{
+  background:#fff;border:1px solid var(--line);border-radius:14px;
+  padding:18px 20px;display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;
+}
+.row .no{
+  width:34px;height:34px;border-radius:9px;background:var(--ink);color:var(--accent-2);
+  display:grid;place-items:center;font-weight:800;font-size:14px;
+}
+.row h3{font-size:16px;font-weight:800;margin-bottom:2px}
+.row p{font-size:13.5px;color:var(--muted)}
+.badge{
+  font-size:12px;padding:4px 11px;border-radius:999px;white-space:nowrap;
+  background:rgba(255,107,91,.12);color:#c33e30;font-weight:700;
+}
+
+/* reading guide columns */
+.guide{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+.guide h3{font-size:18px;margin-bottom:10px;font-weight:800}
+.guide p{font-size:14.5px;color:#42424f;margin-bottom:12px}
+.guide ul{list-style:none;display:grid;gap:9px}
+.guide li{
+  font-size:14px;color:#42424f;padding-left:22px;position:relative;
+}
+.guide li::before{
+  content:"";position:absolute;left:0;top:.62em;width:9px;height:9px;border-radius:2px;
+  background:var(--accent);transform:rotate(45deg);
+}
+
+/* download panel */
+.dl-panel{
+  background:var(--ink);color:#fff;border-radius:20px;
+  padding:34px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;
+}
+.dl-panel h3{font-size:20px;margin-bottom:8px;font-weight:800}
+.dl-panel p{font-size:14px;color:#c3c1cf;max-width:40em}
+.dl-btn{
+  display:inline-flex;align-items:center;gap:9px;
+  background:var(--accent-2);color:#241a00;font-weight:800;font-size:15px;
+  padding:12px 26px;border-radius:12px;pointer-events:none;
+}
+.dl-note{font-size:12.5px;color:#8f8d9e;margin-top:10px}
+
+/* faq */
+.faq{display:grid;gap:12px}
+details{
+  background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 20px;
+}
+details summary{
+  cursor:pointer;font-weight:800;font-size:15px;list-style:none;
+  display:flex;justify-content:space-between;align-items:center;gap:12px;
+}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+";font-size:19px;color:var(--accent);font-weight:700}
+details[open] summary::after{content:"–"}
+details p{font-size:14px;color:var(--muted);margin-top:10px}
+
+/* footer */
+footer.site{
+  background:var(--ink);color:#a9a7b8;padding:40px 0 30px;margin-top:10px;
+}
+.foot-top{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:24px}
+.foot-brand{color:#fff;font-weight:800;font-size:17px;display:flex;align-items:center;gap:9px;margin-bottom:8px}
+.foot-brand svg{width:26px;height:26px}
+.foot-top p{font-size:13.5px;max-width:44em;line-height:1.8}
+.foot-links{display:flex;gap:18px;flex-wrap:wrap;font-size:13.5px}
+.foot-links a:hover{color:var(--accent-2)}
+.foot-bottom{
+  border-top:1px solid rgba(255,255,255,.10);padding-top:18px;
+  font-size:12.5px;color:#7d7b8c;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+}
+
+@media(max-width:900px){
+  .hero .grid{grid-template-columns:1fr;gap:30px}
+  .cards{grid-template-columns:1fr 1fr}
+  .guide{grid-template-columns:1fr;gap:26px}
+  .dl-panel{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+  .nav{padding:10px 0}
+  .logo{font-size:17px}
+  .navlinks a{padding:6px 10px;font-size:13px}
+  .hero{padding:38px 0 44px}
+  .hero p.lead{font-size:15px}
+  .stats{grid-template-columns:1fr;gap:10px}
+  .cards{grid-template-columns:1fr}
+  section.block{padding:42px 0}
+  .row{grid-template-columns:auto 1fr;gap:12px}
+  .row .badge{grid-column:2;justify-self:start}
+  .dl-panel{padding:24px}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="91次元漫画首页">
+      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#ffffff" opacity=".08"/>
+        <path d="M17 19h13a6 6 0 0 1 6 6v21a5 5 0 0 0-5-5H17z" fill="#ff6b5b"/>
+        <path d="M47 19H34a6 6 0 0 0-6 6v21a5 5 0 0 1 5-5h14z" fill="#ffd166"/>
+      </svg>
+      <span>91次元漫画</span>
+    </a>
+    <nav class="navlinks" aria-label="主导航">
+      <a href="#hot">热门推荐</a>
+      <a href="#category">题材分类</a>
+      <a href="#guide">阅读指南</a>
+      <a href="#app">客户端</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="grid">
+        <div>
+          <span class="eyebrow">在线漫画阅读 · 多题材更新</span>
+          <h1><span class="hl">91次元漫画</span></h1>
+          <p class="lead">91次元漫画是一个面向漫画读者的在线阅读站点，围绕热门作品推荐、题材分类与阅读入口组织内容。无论你追更连载还是想找一部完整的短篇，都可以从这里的推荐与分类开始。</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#hot">开始浏览热门漫画</a>
+            <a class="btn btn-ghost" href="#category">按题材查找</a>
+          </div>
+          <div class="stats">
+            <div class="stat"><b>多题材</b><span>国漫 · 日漫 · 韩漫</span></div>
+            <div class="stat"><b>分类浏览</b><span>按题材与状态筛选</span></div>
+            <div class="stat"><b>在线阅读</b><span>网页端直接进入</span></div>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <svg viewBox="0 0 420 300" role="img">
+            <rect width="420" height="300" rx="14" fill="#1e1e2b"/>
+            <rect x="26" y="30" width="150" height="112" rx="10" fill="#2b2b3d"/>
+            <rect x="26" y="30" width="150" height="112" rx="10" fill="none" stroke="#ff6b5b" stroke-width="2" opacity=".8"/>
+            <circle cx="66" cy="66" r="12" fill="#ffd166"/>
+            <rect x="46" y="92" width="110" height="7" rx="3.5" fill="#4a4a63"/>
+            <rect x="46" y="108" width="76" height="7" rx="3.5" fill="#4a4a63"/>
+            <rect x="196" y="30" width="198" height="70" rx="10" fill="#2b2b3d"/>
+            <rect x="212" y="48" width="120" height="8" rx="4" fill="#ff6b5b" opacity=".85"/>
+            <rect x="212" y="66" width="150" height="6" rx="3" fill="#4a4a63"/>
+            <rect x="212" y="80" width="110" height="6" rx="3" fill="#4a4a63"/>
+            <rect x="196" y="116" width="198" height="26" rx="8" fill="#2b2b3d"/>
+            <rect x="212" y="125" width="60" height="8" rx="4" fill="#ffd166"/>
+            <rect x="26" y="162" width="368" height="108" rx="12" fill="#262635"/>
+            <path d="M60 236c22-34 44-34 66 0" stroke="#ff6b5b" stroke-width="3" fill="none"/>
+            <path d="M150 236c22-46 44-46 66 0" stroke="#ffd166" stroke-width="3" fill="none"/>
+            <path d="M240 236c22-28 44-28 66 0" stroke="#7c8bff" stroke-width="3" fill="none"/>
+            <circle cx="330" cy="200" r="16" fill="none" stroke="#ff6b5b" stroke-width="3"/>
+            <path d="M341 211l14 14" stroke="#ff6b5b" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOT -->
+  <section class="block" id="hot">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="tag">热门推荐</span>
+        <h2>本周值得先看的几部作品</h2>
+        <p>推荐列表按题材与阅读节奏排列，方便你快速判断是否合口味。以下条目描述的是作品类型与看点，不涉及具体更新数据。</p>
+      </div>
+      <div class="rows">
+        <article class="row">
+          <span class="no">01</span>
+          <div>
+            <h3>热血少年向 · 成长与对决</h3>
+            <p>以主角的成长线为主线，章节节奏紧凑，适合喜欢连续追更的读者从第一卷读起。</p>
+          </div>
+          <span class="badge">连载</span>
+        </article>
+        <article class="row">
+          <span class="no">02</span>
+          <div>
+            <h3>都市日常向 · 生活切片</h3>
+            <p>单回篇幅较短，适合碎片时间阅读，画风偏清爽，剧情以人物关系推进为主。</p>
+          </div>
+          <span class="badge">短篇</span>
+        </article>
+        <article class="row">
+          <span class="no">03</span>
+          <div>
+            <h3>奇幻冒险向 · 世界观展开</h3>
+            <p>前期铺垫较慢，进入主线后信息密度提升，建议连续阅读多回以保持对设定的理解。</p>
+          </div>
+          <span class="badge">连载</span>
+        </article>
+        <article class="row">
+          <span class="no">04</span>
+          <div>
+            <h3>悬疑推理向 · 线索与反转</h3>
+            <p>注重伏笔回收，适合喜欢边读边推敲的读者，阅读时建议留意每回的画面细节。</p>
+          </div>
+          <span class="badge">完结</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORY -->
+  <section class="block alt" id="category">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="tag">题材分类</span>
+        <h2>按题材与阅读习惯查找</h2>
+        <p>91次元漫画的分类思路兼顾题材与阅读方式，你可以先确定想看的方向，再进入具体作品。</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3l2.6 5.6 6.1.8-4.5 4.2 1.1 6-5.3-3-5.3 3 1.1-6L3.3 9.4l6.1-.8z" stroke="#ff6b5b" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>热血与冒险</h3>
+          <p>强调冲突与成长，段落推进快，适合一次阅读多回的读者。</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h10" stroke="#ff6b5b" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <h3>日常与治愈</h3>
+          <p>以生活细节与情绪描写为主，单回独立性强，适合睡前阅读。</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="6.5" stroke="#ff6b5b" stroke-width="1.8"/><path d="M16 16l4 4" stroke="#ff6b5b" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <h3>悬疑与推理</h3>
+          <p>线索型叙事，回与回之间关联紧密，建议按顺序阅读。</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 20s-7-4.3-7-9a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 4.7-7 9-7 9z" stroke="#ff6b5b" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>恋爱与青春</h3>
+          <p>关系推进是主要看点，适合关注人物心理与对话的读者。</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 19V5l8 5 8-5v14" stroke="#ff6b5b" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>奇幻与设定</h3>
+          <p>世界观信息量大，前期建议连续阅读，避免设定衔接断裂。</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="7" height="7" rx="1.6" stroke="#ff6b5b" stroke-width="1.8"/><rect x="13" y="4" width="7" height="7" rx="1.6" stroke="#ff6b5b" stroke-width="1.8"/><rect x="4" y="13" width="7" height="7" rx="1.6" stroke="#ff6b5b" stroke-width="1.8"/><rect x="13" y="13" width="7" height="7" rx="1.6" stroke="#ff6b5b" stroke-width="1.8"/></svg>
+          </div>
+          <h3>全部题材</h3>
+          <p>不确定看什么时，可从全部题材中按更新状态与篇幅筛选。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUIDE -->
+  <section class="block" id="guide">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="tag">阅读指南</span>
+        <h2>在91次元漫画上安排阅读顺序</h2>
+        <p>面向新读者的三个实际问题：从哪里开始、怎样追更、怎样减少阅读中断。下面给出可直接执行的做法。</p>
+      </div>
+      <div class="guide">
+        <div>
+          <h3>第一次访问怎么开始</h3>
+          <p>先看热门推荐里的题材标签，判断自己想读热血、日常还是悬疑，再进入对应分类。对连载作品，建议从第一回读起，避免后期设定理解出现断层。</p>
+          <ul>
+            <li>用题材分类缩小范围，再比较两三部作品的开篇</li>
+            <li>优先选择标注完结的作品，阅读体验更连贯</li>
+            <li>遇到世界观复杂的作品，连续阅读三到五回再判断</li>
+          </ul>
+        </div>
+        <div>
+          <h3>追更与阅读节奏</h3>
+          <p>连载作品适合固定时间回看，利用分类页的更新状态确认进度。阅读时保持同一设备与同一入口，书签与阅读记录更容易对上。</p>
+          <ul>
+            <li>把常看的作品集中在同一浏览器收藏夹</li>
+            <li>长作品分段阅读，每段结束记录读到第几回</li>
+            <li>画面信息密集的作品，适当放大页面阅读</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APP / DOWNLOAD -->
+  <section class="block alt" id="app">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="tag">客户端</span>
+        <h2>把阅读入口放到桌面</h2>
+        <p>91次元漫画以网页端阅读为主，桌面端与移动端浏览器均可直接访问。客户端用于固定入口与阅读记录整理，下载地址将在正式发布后提供。</p>
+      </div>
+      <div class="dl-panel">
+        <div>
+          <h3>客户端下载</h3>
+          <p>当前页面提供的是客户端介绍，安装包尚未开放下载。你可以先通过网页端浏览热门推荐与题材分类，待下载入口开放后再安装。</p>
+          <p class="dl-note">说明：下载入口暂不可用，开放后将在本区域更新。</p>
+        </div>
+        <div>
+          <a class="dl-btn" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4v10m0 0l-4-4m4 4l4-4M5 19h14" stroke="#241a00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            下载
+          </a>
+          <p class="dl-note">支持桌面与移动浏览器阅读</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="block" id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="tag">常见问题</span>
+        <h2>读者常问的几件事</h2>
+        <p>以下回答围绕91次元漫画的页面功能与阅读方式，不涉及具体作品版权与合作信息。</p>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>91次元漫画需要注册才能阅读吗？</summary>
+          <p>页面以浏览与阅读入口为主，热门推荐与题材分类可直接查看。是否需要账号取决于具体入口的开放状态，页面本身不收集额外信息。</p>
+        </details>
+        <details>
+          <summary>怎样找到适合自己的漫画？</summary>
+          <p>先按题材分类筛选，再参考热门推荐中的类型说明与阅读节奏提示，通常在两到三部作品之间就能确定方向。</p>
+        </details>
+        <details>
+          <summary>连载作品错过更新怎么办？</summary>
+          <p>回到题材分类页确认作品的更新状态，再按回目顺序补读。长作品建议分段阅读并记录进度，避免前后设定混淆。</p>
+        </details>
+        <details>
+          <summary>客户端什么时候可以下载？</summary>
+          <p>客户端下载入口目前处于待开放状态，本页下载按钮不可点击。开放后会在客户端区域更新说明，网页端阅读不受影响。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <path d="M17 19h13a6 6 0 0 1 6 6v21a5 5 0 0 0-5-5H17z" fill="#ff6b5b"/>
+            <path d="M47 19H34a6 6 0 0 0-6 6v21a5 5 0 0 1 5-5h14z" fill="#ffd166"/>
+          </svg>
+          <span>91次元漫画</span>
+        </div>
+        <p>91次元漫画是面向漫画读者的在线阅读站点首页，提供热门漫画推荐、题材分类与阅读指南，帮助读者按题材与阅读节奏找到合适作品。</p>
+      </div>
+      <nav class="foot-links" aria-label="页尾导航">
+        <a href="#hot">热门推荐</a>
+        <a href="#category">题材分类</a>
+        <a href="#guide">阅读指南</a>
+        <a href="#app">客户端</a>
+        <a href="#faq">常见问题</a>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <span>© 91次元漫画 · 页面内容以阅读导航与分类说明为主</span>
+      <span>阅读入口与作品信息请以站内实际页面为准</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
