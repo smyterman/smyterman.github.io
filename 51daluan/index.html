@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>51大乱斗yandex-大乱斗游戏在线玩_51大乱斗yandex玩法与入口导航</title>
+<meta name="description" content="51大乱斗yandex主题导航页，整理大乱斗类网页游戏的玩法要点、入口说明与常见问题，帮助玩家快速找到51大乱斗yandex相关页面并了解其基本操作方式。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b2338'/%3E%3Ccircle cx='24' cy='26' r='9' fill='%23ff7a45'/%3E%3Ccircle cx='42' cy='38' r='9' fill='%234fa8ff'/%3E%3Cpath d='M14 50h36' stroke='%23ffd166' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --ink:#1b2338;
+    --ink-soft:#3d4763;
+    --muted:#68718c;
+    --line:#e3e7f0;
+    --bg:#f5f7fc;
+    --card:#ffffff;
+    --brand:#ff7a45;
+    --brand-2:#4fa8ff;
+    --brand-3:#ffd166;
+    --radius:16px;
+    --shadow:0 10px 30px rgba(27,35,56,.08);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,-apple-system,"Segoe UI",sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+  img,svg{display:block;max-width:100%}
+  .wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 20px}
+
+  /* Header */
+  header.site{
+    position:sticky;top:0;z-index:50;
+    background:rgba(245,247,252,.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{display:flex;align-items:center;gap:20px;min-height:68px;flex-wrap:wrap}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;letter-spacing:.2px}
+  .logo .mark{width:36px;height:36px;flex:0 0 auto}
+  .logo .brand-text{color:var(--ink);word-break:break-word}
+  nav.main{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
+  nav.main a{
+    padding:8px 13px;border-radius:999px;font-size:14.5px;color:var(--ink-soft);
+    transition:background .2s,color .2s;
+  }
+  nav.main a:hover{background:#e9eefb;color:var(--ink)}
+
+  /* Hero */
+  .hero{
+    background:
+      radial-gradient(680px 320px at 88% -10%,rgba(79,168,255,.22),transparent 70%),
+      radial-gradient(520px 300px at 6% 0%,rgba(255,122,69,.18),transparent 70%),
+      linear-gradient(180deg,#ffffff, #f5f7fc 78%);
+    border-bottom:1px solid var(--line);
+  }
+  .hero-grid{
+    display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center;
+    padding:56px 0 60px;
+  }
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:13px;font-weight:700;color:#b8451a;
+    background:#fff1e9;border:1px solid #ffd9c6;border-radius:999px;
+    padding:5px 12px;margin-bottom:16px;
+  }
+  .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--brand)}
+  h1{
+    font-size:clamp(28px,4.2vw,42px);
+    line-height:1.25;margin:0 0 16px;font-weight:900;letter-spacing:-.4px;
+    word-break:break-word;
+  }
+  h1 .accent{
+    background:linear-gradient(90deg,var(--brand),#ff9f43 55%,var(--brand-2));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .lede{font-size:16.5px;color:var(--ink-soft);margin:0 0 26px;max-width:36em}
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:12px 22px;border-radius:12px;font-weight:700;font-size:15px;
+    transition:transform .15s, box-shadow .2s, background .2s;
+    border:1px solid transparent;
+  }
+  .btn-primary{background:var(--ink);color:#fff;box-shadow:0 8px 20px rgba(27,35,56,.22)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(27,35,56,.26)}
+  .btn-ghost{background:#fff;color:var(--ink);border-color:var(--line)}
+  .btn-ghost:hover{background:#f0f4ff}
+  .btn[aria-disabled="true"]{opacity:.62;cursor:not-allowed;pointer-events:none}
+  .hero-note{margin-top:18px;font-size:13px;color:var(--muted)}
+
+  .hero-art{
+    position:relative;background:#fff;border:1px solid var(--line);border-radius:24px;
+    padding:18px;box-shadow:var(--shadow);
+  }
+  .hero-art .tag{
+    position:absolute;top:-12px;left:18px;background:var(--brand-3);color:#5a4300;
+    font-size:12px;font-weight:800;padding:4px 12px;border-radius:999px;
+  }
+  .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+  .stat{background:#f5f7fc;border:1px solid var(--line);border-radius:12px;padding:10px 12px;text-align:center}
+  .stat b{display:block;font-size:18px;color:var(--ink)}
+  .stat span{font-size:12px;color:var(--muted)}
+
+  /* Sections */
+  section{padding:56px 0}
+  .sec-head{max-width:44em;margin-bottom:28px}
+  .sec-head h2{font-size:24px;margin:0 0 10px;font-weight:800;letter-spacing:-.2px}
+  .sec-head p{margin:0;color:var(--muted);font-size:15px}
+
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px;box-shadow:0 4px 14px rgba(27,35,56,.04);
+    transition:transform .18s, box-shadow .2s;
+  }
+  .card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+  .card .ico{
+    width:42px;height:42px;border-radius:11px;display:grid;place-items:center;
+    margin-bottom:14px;
+  }
+  .ico-a{background:#fff1e9}
+  .ico-b{background:#eaf3ff}
+  .ico-c{background:#fff8e0}
+  .card h3{margin:0 0 8px;font-size:17px}
+  .card p{margin:0;font-size:14.5px;color:var(--muted)}
+
+  /* Steps */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:step}
+  .step{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:20px;position:relative;
+  }
+  .step::before{
+    counter-increment:step;content:counter(step);
+    display:grid;place-items:center;
+    width:30px;height:30px;border-radius:9px;
+    background:var(--ink);color:#fff;font-weight:800;font-size:14px;
+    margin-bottom:12px;
+  }
+  .step h3{margin:0 0 6px;font-size:15.5px}
+  .step p{margin:0;font-size:14px;color:var(--muted)}
+
+  /* Split panel */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:stretch}
+  .panel{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:26px;
+  }
+  .panel h3{margin:0 0 12px;font-size:18px}
+  .panel p{margin:0 0 12px;font-size:14.8px;color:var(--ink-soft)}
+  .panel p:last-child{margin-bottom:0}
+  ul.check{list-style:none;margin:0;padding:0}
+  ul.check li{
+    position:relative;padding-left:26px;margin-bottom:10px;font-size:14.6px;color:var(--ink-soft);
+  }
+  ul.check li::before{
+    content:"";position:absolute;left:0;top:.55em;
+    width:14px;height:14px;border-radius:50%;
+    background:linear-gradient(135deg,var(--brand-2),#8cc6ff);
+  }
+  ul.check li:last-child{margin-bottom:0}
+
+  /* FAQ */
+  .faq{display:grid;gap:12px}
+  details{
+    background:#fff;border:1px solid var(--line);border-radius:12px;padding:0 18px;
+  }
+  details[open]{box-shadow:0 6px 18px rgba(27,35,56,.06)}
+  summary{
+    cursor:pointer;padding:16px 0;font-weight:700;font-size:15.5px;list-style:none;
+    display:flex;align-items:center;justify-content:space-between;gap:12px;
+  }
+  summary::-webkit-details-marker{display:none}
+  summary::after{
+    content:"+";font-weight:800;color:var(--brand);font-size:20px;line-height:1;flex:0 0 auto;
+  }
+  details[open] summary::after{content:"–"}
+  details .ans{padding:0 0 18px;color:var(--muted);font-size:14.6px;max-width:52em}
+
+  /* Footer */
+  footer.site{
+    background:var(--ink);color:#c9d2e8;padding:38px 0 26px;margin-top:20px;
+  }
+  .foot-top{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:flex-start}
+  .foot-brand{display:flex;align-items:center;gap:10px;font-weight:800;color:#fff;font-size:16px}
+  .foot-brand .mark{width:32px;height:32px}
+  .foot-links{display:flex;gap:18px;flex-wrap:wrap;font-size:14px}
+  .foot-links a{color:#c9d2e8}
+  .foot-links a:hover{color:#fff}
+  .foot-bottom{
+    margin-top:24px;padding-top:18px;border-top:1px solid rgba(255,255,255,.12);
+    font-size:13px;color:#93a0bd;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+  }
+
+  @media (max-width:920px){
+    .hero-grid{grid-template-columns:1fr;gap:32px;padding:40px 0 46px}
+    .cards{grid-template-columns:1fr 1fr}
+    .steps{grid-template-columns:1fr 1fr}
+    .split{grid-template-columns:1fr}
+  }
+  @media (max-width:640px){
+    .nav-inner{min-height:auto;padding:12px 0;gap:12px}
+    nav.main{margin-left:0;width:100%;overflow-x:auto;flex-wrap:nowrap;padding-bottom:2px}
+    nav.main a{white-space:nowrap;font-size:14px;padding:7px 11px}
+    .cards{grid-template-columns:1fr}
+    .steps{grid-template-columns:1fr}
+    section{padding:40px 0}
+    h1{font-size:27px}
+    .lede{font-size:15.5px}
+    .hero-art{padding:16px}
+    .btn{width:100%;justify-content:center}
+    .cta-row{gap:10px}
+    .sec-head h2{font-size:21px}
+  }
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav-inner">
+    <a class="logo" href="#top" aria-label="51大乱斗yandex 首页">
+      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#1b2338"/>
+        <circle cx="24" cy="26" r="9" fill="#ff7a45"/>
+        <circle cx="42" cy="38" r="9" fill="#4fa8ff"/>
+        <path d="M14 50h36" stroke="#ffd166" stroke-width="5" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-text">51大乱斗yandex</span>
+    </a>
+    <nav class="main" aria-label="主导航">
+      <a href="#intro">主题介绍</a>
+      <a href="#play">玩法要点</a>
+      <a href="#start">进入步骤</a>
+      <a href="#notice">使用提示</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow"><span class="dot"></span>大乱斗网页游戏 · 主题导航</span>
+        <h1>51大乱斗yandex</h1>
+        <p class="lede">
+          51大乱斗yandex 是一个围绕大乱斗类网页游戏的主题入口页。这里把玩法结构、进入步骤与常见疑问整理在一起，
+          方便你在打开 51大乱斗yandex 之前先弄清它是什么、能做什么，以及第一次进入时该注意什么。
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#start">
+            查看进入步骤
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a class="btn btn-ghost" href="#play">了解玩法要点</a>
+        </div>
+        <p class="hero-note">页面内容为主题说明与使用整理，具体可用功能以对应页面实际呈现为准。</p>
+      </div>
+
+      <div class="hero-art">
+        <span class="tag">大乱斗</span>
+        <svg viewBox="0 0 420 300" role="img" aria-label="大乱斗主题插画：多个角色在同一场地内对战">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#eaf3ff"/><stop offset="1" stop-color="#fff1e9"/>
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="420" height="300" rx="18" fill="url(#g1)"/>
+          <ellipse cx="210" cy="244" rx="150" ry="26" fill="#dfe6f7"/>
+          <circle cx="128" cy="150" r="38" fill="#ff7a45"/>
+          <circle cx="128" cy="138" r="10" fill="#fff" opacity=".85"/>
+          <circle cx="210" cy="112" r="44" fill="#4fa8ff"/>
+          <circle cx="210" cy="98" r="11" fill="#fff" opacity=".85"/>
+          <circle cx="296" cy="158" r="34" fill="#ffd166"/>
+          <circle cx="296" cy="147" r="9" fill="#fff" opacity=".85"/>
+          <path d="M96 208h230" stroke="#1b2338" stroke-width="8" stroke-linecap="round" opacity=".85"/>
+          <circle cx="72" cy="86" r="6" fill="#ff7a45" opacity=".6"/>
+          <circle cx="352" cy="74" r="8" fill="#4fa8ff" opacity=".55"/>
+          <circle cx="332" cy="220" r="5" fill="#1b2338" opacity=".35"/>
+        </svg>
+        <div class="stat-row">
+          <div class="stat"><b>多角色</b><span>同场对战</span></div>
+          <div class="stat"><b>快节奏</b><span>回合较短</span></div>
+          <div class="stat"><b>浏览器</b><span>即开即玩</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Intro -->
+  <section id="intro">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>51大乱斗yandex 是什么</h2>
+        <p>先理解主题，再决定要不要进入。以下三个角度是初次接触 51大乱斗yandex 时最常被问到的内容。</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="ico ico-a">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="9" cy="9" r="3.4" stroke="#ff7a45" stroke-width="2"/>
+              <circle cx="16.5" cy="15" r="3.4" stroke="#1b2338" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3>主题指向</h3>
+          <p>名称中的“大乱斗”描述的是多角色在同一场地内互相攻击的玩法类型，51大乱斗yandex 指的就是这一类网页游戏的入口与说明。</p>
+        </article>
+        <article class="card">
+          <div class="ico ico-b">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="3.5" y="5" width="17" height="12" rx="2.5" stroke="#4fa8ff" stroke-width="2"/>
+              <path d="M9 20h6" stroke="#1b2338" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>运行方式</h3>
+          <p>此类游戏通常以网页形式运行，无需安装客户端，打开页面即可开始。51大乱斗yandex 的访问也遵循这一常见方式。</p>
+        </article>
+        <article class="card">
+          <div class="ico ico-c">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 3.5l7 3.5v5c0 4-3 6.8-7 8.5-4-1.7-7-4.5-7-8.5v-5l7-3.5z" stroke="#c99a00" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>使用边界</h3>
+          <p>本页是主题整理与导航，不代管游戏数据与账号。51大乱斗yandex 的具体功能范围、开放状态以对应页面实际显示为准。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Play -->
+  <section id="play" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>51大乱斗yandex 的玩法要点</h2>
+        <p>大乱斗类游戏的核心乐趣来自规则简单、对抗直接。下面几项是这类玩法最常见的结构，可作为上手前的认知准备。</p>
+      </div>
+      <div class="split">
+        <div class="panel">
+          <h3>对战结构</h3>
+          <p>多个角色被放进同一张场地，各自拥有基础移动、跳跃与攻击动作。目标通常是削减对手状态或把对方推出场地，先达成条件的一方获胜。</p>
+          <p>场地一般带有边界与平台，利用地形制造位移是常见技巧。51大乱斗yandex 所属的这一玩法类型，正依赖这种“位置即资源”的设计。</p>
+        </div>
+        <div class="panel">
+          <h3>上手顺序建议</h3>
+          <ul class="check">
+            <li>先熟悉方向键或移动方式，确认角色能稳定走到平台边缘。</li>
+            <li>再练习单一攻击键，观察命中范围与出手节奏。</li>
+            <li>接着尝试“攻击 + 位移”组合，理解击退方向。</li>
+            <li>最后再挑选固定角色重复对局，用熟练度代替角色数量。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Start -->
+  <section id="start" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>进入 51大乱斗yandex 的四个步骤</h2>
+        <p>流程不复杂，但按顺序检查能少走弯路。以下步骤为通用整理，不代表任何单一平台的操作承诺。</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <h3>确认网络</h3>
+          <p>网页游戏依赖稳定连接，先确认浏览器可正常加载外部脚本与资源。</p>
+        </div>
+        <div class="step">
+          <h3>选择浏览器</h3>
+          <p>使用较新版本的桌面浏览器，能减少画面与操作响应上的兼容问题。</p>
+        </div>
+        <div class="step">
+          <h3>进入页面</h3>
+          <p>打开 51大乱斗yandex 对应页面，等待加载完成后再进行操作。</p>
+        </div>
+        <div class="step">
+          <h3>熟悉操作</h3>
+          <p>先看规则或按键说明，用一两局适应节奏，再进入正式对局。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Notice -->
+  <section id="notice" style="padding-top:0">
+    <div class="wrap">
+      <div class="split">
+        <div class="panel">
+          <h3>使用提示</h3>
+          <p>51大乱斗yandex 属于网页入口类主题，页面内容会随运营情况变化。若某次打开后内容与描述不同，以页面当次显示为准，不必反复刷新尝试。</p>
+          <p>对局中若出现明显卡顿，优先检查网络与浏览器标签数量，而不是频繁切换页面。稳定环境比更换入口更有效。</p>
+        </div>
+        <div class="panel">
+          <h3>资料下载</h3>
+          <p>本站整理的主题说明文件仍在准备中，入口暂不可用。后续提供时会以可下载形式给出，包含玩法要点与操作提示的汇总。</p>
+          <a class="btn btn-ghost" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1" style="margin-top:6px">
+            下载
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 4v10M8 11l4 4 4-4M5 19h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>关于 51大乱斗yandex 的常见问题</h2>
+        <p>问题按访问频率排列，回答只涉及本页能够说明的范围。</p>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>51大乱斗yandex 需要安装客户端吗？</summary>
+          <div class="ans">按此类网页游戏的常见形式，它通过浏览器直接运行，一般不需要单独安装客户端。实际是否需要额外组件，以对应页面提示为准。</div>
+        </details>
+        <details>
+          <summary>手机上可以玩吗？</summary>
+          <div class="ans">是否能正常游玩取决于页面本身的操作适配。大乱斗玩法对按键响应要求较高，桌面浏览器通常更易操作；手机端建议先确认页面是否提供触屏控制。</div>
+        </details>
+        <details>
+          <summary>为什么有时页面打开较慢？</summary>
+          <div class="ans">网页游戏需要加载脚本与图像资源，首次打开往往比再次访问慢。网络波动、浏览器标签过多都会影响加载速度，可先关闭占用资源的其他页面再试。</div>
+        </details>
+        <details>
+          <summary>本页会保存我的游戏数据吗？</summary>
+          <div class="ans">不会。本页只做主题说明与导航整理，不存储账号、进度或对战记录。相关数据由实际运行的页面负责。</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#ff7a45"/>
+          <circle cx="24" cy="26" r="8" fill="#1b2338"/>
+          <circle cx="42" cy="38" r="8" fill="#ffd166"/>
+          <path d="M14 50h36" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+        </svg>
+        <span>51大乱斗yandex</span>
+      </div>
+      <div class="foot-links">
+        <a href="#intro">主题介绍</a>
+        <a href="#play">玩法要点</a>
+        <a href="#start">进入步骤</a>
+        <a href="#notice">使用提示</a>
+        <a href="#faq">常见问题</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>51大乱斗yandex · 大乱斗网页游戏主题整理与导航</span>
+      <span>内容以页面当次实际呈现为准</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
